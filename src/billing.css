@@ -1,0 +1,255 @@
+
+.billing-page {
+  padding: 28px;
+  color: var(--text-color, #1e293b);
+  background: var(--page-bg, #f5f7fb);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.billing-header,
+.billing-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.billing-eyebrow {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.billing-header h1 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.billing-subtitle,
+.billing-list-header p {
+  color: #64748b;
+  margin: 6px 0;
+}
+
+.billing-refresh,
+.billing-form button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.billing-refresh {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.billing-form button {
+  background: #2563eb;
+  color: white;
+}
+
+.billing-form button:hover {
+  background: #1d4ed8;
+}
+
+.billing-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.billing-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.billing-stat,
+.billing-panel {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 4%);
+}
+
+.billing-stat span,
+.billing-stat small {
+  display: block;
+  color: #64748b;
+}
+
+.billing-stat strong {
+  display: block;
+  font-size: 25px;
+  margin: 12px 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.billing-panel {
+  margin-bottom: 24px;
+}
+
+.billing-panel h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.billing-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.billing-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.billing-form input,
+.billing-form select,
+.billing-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: var(--input-bg, #fff);
+  color: var(--text-color, #1e293b);
+  font: inherit;
+}
+
+.billing-form input:focus,
+.billing-form select:focus,
+.billing-search:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.billing-form-action {
+  display: flex;
+  align-items: end;
+}
+
+.billing-form-action button {
+  min-height: 43px;
+}
+
+.billing-balance-note {
+  color: #475569;
+  align-self: center;
+}
+
+.billing-alert {
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.billing-alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.billing-alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.billing-search {
+  max-width: 280px;
+}
+
+.billing-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.billing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.billing-table th,
+.billing-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.billing-table th {
+  color: #64748b;
+  background: var(--table-head-bg, #f8fafc);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.billing-table tbody tr:hover {
+  background: var(--table-hover-bg, #f8fafc);
+}
+
+.billing-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.billing-status.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.billing-status.partially-paid {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.billing-status.unpaid {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.billing-empty {
+  padding: 25px 0;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .billing-page {
+    padding: 16px;
+  }
+
+  .billing-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-form {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-header h1 {
+    font-size: 25px;
+  }
+
+  .billing-stat strong {
+    font-size: 22px;
+  }
+
+  .billing-search {
+    max-width: 100%;
+  }
+}
